@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pick your class!</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+{% block content %}
+<body>
+
+<div class="jumbotron">
+    <h1>Choose your class</h1>
+    <p>Can't decide upon which class you'd like to pick in a game? How about answering some questions that would help you decide. Try to answer this questions as if you are actually in these situations to get the best results!</p>
+</div>
+<div class="container">
+    <p>Click the button below to get started!</p>
+<form action="Question1.html">
+    <p><input type="submit" name="start" value="Start" /></p>
+</form>
+</div>
+</body>
+{% endblock %}
+</html>

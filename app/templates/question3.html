@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{% extends "home.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Pick your class!</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+{% block content %}
+<body>
+<div class="container">
+    <h1>Question 3</h1>
+    <p>If you were transformed by a wizard into the animal of your choice below what might that be?</p>
+    <br>
+    <form action="Question4.html" method="GET" novalidate>
+
+        <input type="submit" name="option1" value="Snake">
+        <br>
+        <input type="submit" name="option2" value="Grizzly Bear">
+        <br>
+        <input type="submit" name="option3" value="Horse" />
+        <br>
+        <input type="submit" name="option4" value="Octopus" />
+    </form>
+</div>
+</body>
+{% endblock %}
+</html>

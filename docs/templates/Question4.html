@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{% extends "home.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Pick your class!</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+{% block content %}
+<body>
+<div class="container">
+    <h1>Question 4</h1>
+    <p>A man claiming to be a God has appeared in court, he murdered his brother stating "It's what I willed.". You are the judge of the court what do you decide to do with the man?</p>
+    <br>
+    <form action="Question5.html" method="GET" novalidate>
+
+        <input type="submit" name="option1" value="Sentence him to death. You think no God would allow himself to be killed">
+        <br>
+        <input type="submit" name="option2" value="Bring in a jury and allow the man to explain why he claims to be god and why his actions were just">
+        <br>
+        <input type="submit" name="option3" value="Speak to him privately and persuade him into giving all his money up for his freedom" />
+        <br>
+        <input type="submit" name="option4" value="Release the man and ask to join him and be apart of his vision of the world" />
+    </form>
+</div>
+</body>
+{% endblock %}
+</html>

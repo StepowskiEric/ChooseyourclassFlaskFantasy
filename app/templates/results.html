@@ -1,0 +1,126 @@
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pick your class!</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+{% block content %}
+<body>
+<div class="jumbotron">
+
+{% if session['question1'] == 'Q1C1' %}
+{% set combat = combat + 2 %}
+{% elif session['question1'] == 'Q1C2' %}
+{%set magic = magic + 2 %}
+{% elif session['question1'] == 'Q1C3' %}
+{% set stealth = stealth + 2 %}
+{% elif session['question1'] == 'Q1C4' %}
+{% set stealth = stealth + 2 %}
+{% endif %}
+{% if session['question2'] == 'Q2C1' %}
+{% set stealth = stealth + 1 %}
+{% elif session['question2'] == 'Q2C2' %}
+{% set combat = combat + 1 %}
+{% elif session['question2'] == 'Q2C3' %}
+{% set magic = magic + 1 %}
+{% elif session['question2'] == 'Q2C4' %}
+{% set magic = magic + 1 %}
+{% endif %}
+{% if session['question3'] == 'Q3C1' %}
+{% set stealth = stealth + 1 %}
+{% elif session['question3'] == 'Q3C2' %}
+{% set combat = combat + 1 %}
+{% elif session['question3'] == 'Q3C3' %}
+{% set magic = magic + 1 %}
+{% elif session['question3'] == 'Q3C4' %}
+{% set magic = magic + 1 %}
+{% endif %}
+{% if session['question4'] == 'Q4C1' %}
+{% set combat = combat + 1 %}
+{% elif session['question4'] == 'Q4C2' %}
+{% set magic = magic + 1 %}
+{% elif session['question4'] == 'Q4C3' %}
+{%set stealth = stealth + 1 %}
+{% elif session['question4'] == 'Q4C4' %}
+{% set magic = magic + 1 %} 
+{% endif %}
+{% if session['question5'] == 'Q5C1' %}
+{% set combat = combat + 1 %}
+{% elif session['question5'] == 'Q5C2' %}
+{% set stealth = stealth + 1 %}
+{% elif session['question5'] == 'Q5C3' %}
+{% set magic = magic + 1 %}
+{% elif session['question5'] == 'Q5C4' %}
+{%set stealth = stealth + 1 %}
+{% endif %}
+
+{% if combat >= 5 %}
+<h1> You are a barbarian</h1>
+<img src="https://db4sgowjqfwig.cloudfront.net/campaigns/96861/assets/774734/Berserker.jpg?1504512222">
+<p>Violent and always looking for an excuse to kill someone. You're never ending hunger for bloodshed is never satisified.</p>
+{% endif %}
+{% if magic >= 5 %}
+<h1> You are a mage!</h1>
+<img src="https://images3.alphacoders.com/244/thumb-1920-244277.jpg">
+{% endif %}
+{% if stealth >= 5 %}
+<h1>You are a Thief!</h1>
+<img src="https://avatars.mds.yandex.net/get-pdb/921693/0f877808-ebb7-4294-aa9b-595af9a29365/orig">
+<p>Any excuse you get you try and rob people of cash or any valuables. You stop at nothing at your pursuit of wealth and greed.</p>
+{% endif %}
+{% if magic >= 3 and combat >= 2 %}
+<h1>You are a paladin!</h1>
+<img src="https://orig00.deviantart.net/2060/f/2013/277/c/3/diablo_2_paladin_by_ixxs-d6p5cez.jpg">
+{% endif %}
+{% if magic >= 3 and stealth >= 2 %}
+<h1>You are a witch-hunter</h1>
+<img src="https://ksr-ugc.imgix.net/assets/000/499/632/efa440166d20ddf4413aced750f42ac7_original.jpg?ixlib=rb-1.1.0&w=680&fit=max&v=1365391931&auto=format&gif-q=50&q=92&s=49f9858a067ad37ea689f8e5aa0989fd">
+{% endif %}
+{% if combat >= 3 and stealth >= 2 %}
+<h1>You are a Battlemage!</h1>
+<img src="https://i.pinimg.com/736x/b5/e0/80/b5e080f19097d3a7e6458bd7ed9dc325.jpg">
+{% endif %}
+{% if stealth >= 3 and magic >= 2 %}
+<h1>You are a monk!</h1>
+<img src="https://68.media.tumblr.com/054b95e37a37ed854dcf58645d960641/tumblr_n9nl0sxhQC1qb2yb9o1_1280.jpg">
+{% endif %}
+{% if stealth >= 4 and combat >= 1 %}
+<h1>You are an Archer!</h1>
+<img src="https://i.pinimg.com/originals/c6/87/88/c68788d26ac5daa27760eb84b1c946da.jpg">
+{% endif %}
+{% if combat >= 4 and magic >= 1 %}
+<h1>You are a SpellSword</h1>
+<img src="https://vignette.wikia.nocookie.net/lorald/images/3/39/Spellsword_of_Ravenrift.jpg/revision/latest?cb=20160724200446">
+{% endif %}
+{% if magic >= 4 and stealth >= 1 %}
+<h1>You are a healer</h1>
+<img src="https://i.pinimg.com/originals/06/ac/31/06ac31fb19a4bd39235182c5cf2f6ad0.jpg">
+{% endif %}
+{% if stealth >= 4 and magic >= 1 %}
+<h1>You are a Nightblade</h1>
+<img src="https://i.ytimg.com/vi/arlwyMjrM_M/maxresdefault.jpg">
+{% endif %}
+{% if combat >= 2 and magic >=2 and stealth >= 1 %}
+<h1>You are a gladiator</h1>
+<img src="https://i.pinimg.com/originals/28/78/5e/28785eed7ceca74089b0269f27a51410.jpg">
+{% endif %}
+{% if stealth >= 2 and magic >=2 and combat >= 1 %}
+<h1>You are a Mercenary</h1>
+<img src="https://i.pinimg.com/736x/e8/7e/55/e87e55cff7d368d936ec665b39ec88f2.jpg">
+{% endif %}
+{% if stealth >= 2 and combat >=2 and magic >= 1 %}
+<h1>You are an Acrobat </h1>
+<img src="https://i.pinimg.com/originals/b0/1d/71/b01d710503da5f55bf21c22c46dca7c1.jpg">
+{% endif %}
+{% if stealth <= 0 and combat <= 0 and magic <= 0 %}
+<h1>You are nothing. </h1>
+{% endif %}
+
+</div>
+</body>
+{% endblock %}
+
+</html>

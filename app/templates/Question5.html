@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{% extends "home.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Pick your class!</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+{% block content %}
+<body>
+<div class="container">
+    <h1>Question 5</h1>
+    <p>Upon arriving in a far away town for the first time. As you walk through the town the citizens yell at you to leave and go back to where you are from and other hostile comments. What do you do?</p>
+    <br>
+    <form action="results.html" method="GET" novalidate>
+
+        <input type="submit" name="option1" value="Slaughter the whole village">
+        <br>
+        <input type="submit" name="option2" value="Keep your head down and do the business you needed to do in town">
+        <br>
+        <input type="submit" name="option3" value="Leave the town immediately" />
+        <br>
+        <input type="submit" name="option4" value="Find the leader of the town and kill him later in the night to send a message" />
+    </form>
+</div>
+</body>
+{% endblock %}
+</html>
